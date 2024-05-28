@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Video Stats",
+  "version": "1.0",
+  "description": "Get statistics of YouTube videos.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "16": "/image/1.png",
+    "48": "/image/1.png",
+    "128": "/image/1.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/image/1.png",
+      "48": "/image/1.png",
+      "128": "/image/1.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

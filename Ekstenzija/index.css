@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    width: 330px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result, #model1-result, #model2-result, #json-result {
+    display: none;
+    margin-top: 20px;
+}
+
+#result.show, #model1-result.show, #model2-result.show, #json-result.show {
+    display: block;
+}
+
+.result-item, .model-item {
+    margin-bottom: 10px;
+}
+
+.result-item img, .model-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.result-title, .model-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.result-channel, .model-content {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.result-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.result-stats, .model-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.result-stats div, .model-stats div {
+    flex: 1;
+    text-align: center;
+}
+
+#result, #model1-result, #model2-result {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.model-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.model-content {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
