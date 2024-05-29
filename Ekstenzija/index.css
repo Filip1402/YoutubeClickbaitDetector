@@ -3,22 +3,30 @@ body {
     margin: 0;
     padding: 20px;
     width: 330px;
+    background-color: rgb(226, 125, 9);
+}
+
+h1 {
+    text-align: center;
+    color: white;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: rgb(226, 125, 9);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 20px;
     width: 100%;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color:black;
+    color: white;
 }
 
 #result, #model1-result, #model2-result, #json-result {
@@ -60,11 +68,13 @@ button:hover {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    flex-wrap: wrap; /* Add this to allow wrapping */
 }
 
 .result-stats div, .model-stats div {
-    flex: 1;
+    flex: 1 1 45%; /* Adjust the flex property for better spacing */
     text-align: center;
+    margin-bottom: 10px; /* Add margin-bottom for spacing between stats */
 }
 
 #result, #model1-result, #model2-result {
@@ -74,19 +84,35 @@ button:hover {
     background-color: #f9f9f9;
 }
 
-.model-title {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #333;
+.result-item {
+    display: flex;
+    justify-content: center;
 }
 
-.model-content {
+.result-item img {
+    margin-bottom: 10px; 
+}
+.result-item .result-title{
+    text-align: center;
+}
+.result-title {
+    font-size: 20px; 
+    color: #333; 
+}
+
+.result-channel, .result-stats div {
+    color: #666; 
+}
+
+.result-main-stats {
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
     margin-bottom: 10px;
-    color: #555;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+}
+
+.result-main-stats div {
+    flex: 1;
+    text-align: center;
+    margin: 0 10px; 
 }

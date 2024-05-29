@@ -33,21 +33,19 @@ function displayResult(result) {
                 <img src="${data.ThumbnailUrl}" alt="Thumbnail">
             </div>
             <div class="result-item result-title">${data.Title}</div>
-            <div class="result-item result-channel">Channel: ${
-              data.Channel
-            }</div>
-            <div class="result-item result-stats">
+            <div class="result-item result-channel">Channel: ${data.Channel}</div>
+            <div class="result-item result-main-stats">
                 <div>Views: ${data.Views}</div>
                 <div>Likes: ${data.Likes}</div>
+                <div>DisLikes: ${data.Dislikes}</div>
                 <div>Comments: ${data.Comment_Count}</div>
+                
             </div>
             <div class="result-item result-stats">
-                <div>Like/Dislike Ratio: ${data.Like_Dislike_Ratio.toFixed(
-                  2
-                )}</div>
-                <div>View/Like Ratio: ${data.View_Like_Ratio.toFixed(2)}</div>
-                <div>View/DisLike Ratio: ${data.View_Dislike_Ratio.toFixed(2)}</div>
-                <div>View/Comment Ratio: ${data.View_Comment_Ratio.toFixed(2)}</div>
+                <div>Like/Dislike Ratio: ${data.Like_Dislike_Ratio.toFixed(4)}</div>
+                <div>View/Like Ratio: ${data.View_Like_Ratio.toFixed(4)}</div>
+                <div>View/DisLike Ratio: ${data.View_Dislike_Ratio.toFixed(4)}</div>
+                <div>View/Comment Ratio: ${data.View_Comment_Ratio.toFixed(4)}</div>
             </div>
         `;
     resultElement.classList.add("show");
@@ -56,6 +54,7 @@ function displayResult(result) {
     resultElement.classList.add("show");
   }
 }
+
 
 function displayJSON(jsonResult) {
   var jsonElement = document.getElementById("json-result");
@@ -104,13 +103,13 @@ async function displayModelResults(result) {
   var model1Element = document.getElementById("model1-result");
   model1Element.innerHTML = `
         <div class="model-title">Results of the 1st model (video statistics):</div>
-        <div class="model-content">They say this is clickbait: ${classificationResult.ClickbaitProbabilityStatistics}</div>`;
+        <div class="model-content">They say this is clickbait: ${classificationResult.ClickbaitProbabilityStatistics}%</div>`;
   model1Element.classList.add("show");
 
   var model2Element = document.getElementById("model2-result");
   model2Element.innerHTML = `
         <div class="model-title">Results of the 1st model (thumbnail):</div>
-        <div class="model-content">They say this is clickbait: ${classificationResult.ClickbaitProbabilityThumbnail}</div>
+        <div class="model-content">They say this is clickbait: ${classificationResult.ClickbaitProbabilityThumbnail}%</div>
     `;
   model2Element.classList.add("show");
 }
